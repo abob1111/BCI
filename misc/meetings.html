@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meeting Minutes &mdash; Brain-Computer Interfaces</title>
+<link rel="stylesheet" href="../styles/main.css">
+<style>
+  .meeting {
+    max-width: 72ch;
+    border-top: 1px solid var(--line);
+  }
+  .meeting:last-of-type { border-bottom: 1px solid var(--line); }
+
+  .meeting summary {
+    display: grid;
+    grid-template-columns: 7rem 1fr auto;
+    gap: 1rem;
+    align-items: baseline;
+    padding: 1.1rem 0;
+    cursor: pointer;
+    list-style: none;
+  }
+  .meeting summary::-webkit-details-marker { display: none; }
+  .meeting summary:hover .m-title { text-decoration: underline; text-underline-offset: 3px; }
+  .meeting summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+
+  .m-date  { color: var(--muted); font-variant-numeric: tabular-nums; font-size: 0.92rem; }
+  .m-title { font-size: 1.1rem; }
+  .m-sign  { color: var(--muted); font-size: 1.3rem; line-height: 1; transition: transform .15s; }
+  .meeting[open] .m-sign { transform: rotate(45deg); }
+
+  .m-body { padding: 0 0 1.6rem 8rem; }
+  .m-body h3 { margin: 1.2rem 0 0.4rem; font-size: 0.95rem; }
+  .m-body p, .m-body li { font-size: 0.95rem; }
+  .m-meta { color: var(--muted); font-size: 0.88rem; margin-bottom: 0.4rem; }
+
+  .m-pdf {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.45rem 0.9rem;
+    border: 1px solid var(--ink);
+    font-size: 0.88rem;
+    text-decoration: none;
+  }
+  .m-pdf:hover { background: var(--ink); color: var(--paper); }
+
+  .pdf-list { list-style: none; padding: 0; max-width: 72ch; }
+  .pdf-list li { padding: 0.7rem 0; border-top: 1px solid var(--line); margin: 0; }
+  .evidence { max-width: none; }
+  .ev-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr)); gap: 2rem; margin-top: 1.5rem; }
+  .ev-card { margin: 0; max-width: none; }
+  .ev-card img { width: 100%; height: 15rem; object-fit: cover; object-position: top left; border: 1px solid var(--line); display: block; transition: border-color .15s; }
+  .ev-card a:hover img { border-color: #fff; }
+  .ev-card figcaption { margin-top: 0.7rem; font-size: 0.88rem; line-height: 1.5; color: var(--muted); }
+  .pdf-list li:last-child { border-bottom: 1px solid var(--line); }
+
+  @media (max-width: 640px) {
+    .meeting summary { grid-template-columns: 1fr auto; }
+    .m-date { grid-column: 1 / -1; }
+    .m-body { padding-left: 0; }
+  }
+</style>
+</head>
+<body class="dark-page">
+
+<header class="masthead">
+  <nav aria-label="Main">
+    <a href="../index.html">Home</a>
+    <a href="topic.html">Technology</a>
+    <a href="opportunities.html">Opportunities</a>
+    <a href="risks.html">Risks</a>
+    <a href="choices.html">Choices</a>
+    <a href="references.html">References</a>
+    <a href="team-members.html">Team</a>
+    <a href="meetings.html" aria-current="page">Meeting Minutes</a>
+  </nav>
+  <a class="wordmark" href="../index.html" aria-label="Home"><img src="../images/brain-logo.png" alt="Brain-Computer Interfaces"></a>
+</header>
+
+<div class="pagehead">
+  <h1>Meeting minutes</h1>
+  <p class="standfirst">Here you can find our evidence of work. This page contains all of our meeting minutes. Click on a meeting below for details and feel free to download the original PDF files.</p>
+</div>
+
+<main>
+
+  <section>
+    <h2>Meetings</h2>
+
+    <details class="meeting">
+      <summary>
+        <span class="m-date">9 Sep 2026</span>
+        <span class="m-title">Meeting 1 &mdash; Introductions and roles</span>
+        <span class="m-sign" aria-hidden="true">+</span>
+      </summary>
+      <div class="m-body">
+        <p class="m-meta">Discord, 12:00&ndash;14:00 &middot; Present: Andrey Bobnev, Taryn Meechai</p>
+        <h3>Decisions</h3>
+        <ul>
+          <li>Andrey voted team leader.</li>
+          <li>Topics considered: AI in learning, robot caretakers in healthcare, political bots.</li>
+          <li>Taryn favoured political bots, Andrey favoured healthcare. No final decision.</li>
+        </ul>
+        <h3>Actions</h3>
+        <ul>
+          <li>Andrey &mdash; research robots in healthcare.</li>
+          <li>Taryn &mdash; research political bots.</li>
+        </ul>
+        <a class="m-pdf" href="../minutes/Meeting_Minutes_01.pdf" target="_blank" rel="noopener">Open original (PDF)</a>
+      </div>
+    </details>
+
+    <details class="meeting">
+      <summary>
+        <span class="m-date">16 Sep 2026</span>
+        <span class="m-title">Meeting 2 &mdash; Choosing the topic</span>
+        <span class="m-sign" aria-hidden="true">+</span>
+      </summary>
+      <div class="m-body">
+        <p class="m-meta">AUT, 12:00&ndash;14:00 &middot; Present: Andrey Bobnev, Taryn Meechai, Alan Paul</p>
+        <h3>Decisions</h3>
+        <ul>
+          <li>Robots in healthcare chosen over political bots as more important to society.</li>
+          <li>The brief's "Artificial body parts and bionic people" led us to brain-computer interfaces.</li>
+          <li>Topic confirmed: Brain-Computer Interfaces.</li>
+        </ul>
+        <h3>Actions</h3>
+        <ul>
+          <li>Andrey &mdash; research the past of BCIs.</li>
+          <li>Taryn &mdash; research the present of BCIs.</li>
+          <li>Alan &mdash; research the future of BCIs.</li>
+        </ul>
+        <a class="m-pdf" href="../minutes/Meeting_Minutes_02.pdf" target="_blank" rel="noopener">Open original (PDF)</a>
+      </div>
+    </details>
+
+    <details class="meeting">
+      <summary>
+        <span class="m-date">23 Sep 2026</span>
+        <span class="m-title">Meeting 3 &mdash; Presentation review</span>
+        <span class="m-sign" aria-hidden="true">+</span>
+      </summary>
+      <div class="m-body">
+        <p class="m-meta">AUT, 14:00&ndash;15:00 &middot; Present: Andrey Bobnev, Taryn Meechai, Alan Paul</p>
+        <h3>Decisions</h3>
+        <ul>
+          <li>Feedback from the lecturer: slide font too small. Andrey to edit and resubmit.</li>
+          <li>Section split confirmed as presented.</li>
+        </ul>
+        <h3>Actions</h3>
+        <ul>
+          <li>Andrey &mdash; Technology section.</li>
+          <li>Taryn &mdash; Risks section.</li>
+          <li>Alan &mdash; Opportunities and Choices sections.</li>
+        </ul>
+        <a class="m-pdf" href="../minutes/Meeting_Minutes_03.pdf" target="_blank" rel="noopener">Open original (PDF)</a>
+      </div>
+    </details>
+
+    <details class="meeting">
+      <summary>
+        <span class="m-date">30 Sep 2026</span>
+        <span class="m-title">Meeting 4 &mdash; Draft review</span>
+        <span class="m-sign" aria-hidden="true">+</span>
+      </summary>
+      <div class="m-body">
+        <p class="m-meta">Discord, 12:00&ndash;14:00 &middot; Present: Andrey Bobnev, Taryn Meechai, Alan Paul</p>
+        <h3>Decisions</h3>
+        <ul>
+          <li>Reviewed each other's source material.</li>
+          <li>Andrey and Taryn presented the first website design.</li>
+        </ul>
+        <h3>Actions</h3>
+        <ul>
+          <li>Andrey &mdash; finalise the Technology section.</li>
+          <li>Taryn &mdash; finalise the Risks section, work on web design.</li>
+          <li>Alan &mdash; finalise the Opportunities and Choices sections.</li>
+        </ul>
+        <a class="m-pdf" href="../minutes/Meeting_Minutes_04.pdf" target="_blank" rel="noopener">Open original (PDF)</a>
+      </div>
+    </details>
+
+    <details class="meeting">
+      <summary>
+        <span class="m-date">7 Oct 2026</span>
+        <span class="m-title">Meeting 5 &mdash; Progress and referencing</span>
+        <span class="m-sign" aria-hidden="true">+</span>
+      </summary>
+      <div class="m-body">
+        <p class="m-meta">Discord, 12:00&ndash;14:00 &middot; Present: Andrey Bobnev, Taryn Meechai, Alan Paul</p>
+        <h3>Decisions</h3>
+        <ul>
+          <li>Drafts improving; word count still an issue.</li>
+          <li>One more week to finalise writing and APA references.</li>
+          <li>Academic sources for future-focused claims are hard to find.</li>
+        </ul>
+        <h3>Actions</h3>
+        <ul>
+          <li>Andrey &mdash; Technology section, APA referencing.</li>
+          <li>Taryn &mdash; Risks section and web design.</li>
+          <li>Alan &mdash; Opportunities and Choices sections.</li>
+        </ul>
+        <a class="m-pdf" href="../minutes/Meeting_Minutes_05.pdf" target="_blank" rel="noopener">Open original (PDF)</a>
+      </div>
+    </details>
+
+    <details class="meeting">
+      <summary>
+        <span class="m-date">14 Oct 2026</span>
+        <span class="m-title">Meeting 6 &mdash; Final review and submission</span>
+        <span class="m-sign" aria-hidden="true">+</span>
+      </summary>
+      <div class="m-body">
+        <p class="m-meta">Discord, 12:00&ndash;14:00 &middot; Present: Andrey Bobnev, Taryn Meechai, Alan Paul</p>
+        <h3>Decisions</h3>
+        <ul>
+          <li>Website design and written material reviewed and agreed by all members.</li>
+          <li>Project ready for submission.</li>
+        </ul>
+        <h3>Submission</h3>
+        <ul>
+          <li>Andrey submits the assignment to Canvas on behalf of the group.</li>
+          <li>Andrey posts a screenshot of the submitted file in the group Discord chat to confirm.</li>
+        </ul>
+        <a class="m-pdf" href="../minutes/Meeting_Minutes_06.pdf" target="_blank" rel="noopener">Open original (PDF)</a>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <h2>Original minutes</h2>
+    <ul class="pdf-list">
+      <li><a href="../minutes/Meeting_Minutes_01.pdf" target="_blank" rel="noopener">Meeting 1 &mdash; 9 September 2026 (PDF)</a></li>
+      <li><a href="../minutes/Meeting_Minutes_02.pdf" target="_blank" rel="noopener">Meeting 2 &mdash; 16 September 2026 (PDF)</a></li>
+      <li><a href="../minutes/Meeting_Minutes_03.pdf" target="_blank" rel="noopener">Meeting 3 &mdash; 23 September 2026 (PDF)</a></li>
+      <li><a href="../minutes/Meeting_Minutes_04.pdf" target="_blank" rel="noopener">Meeting 4 &mdash; 30 September 2026 (PDF)</a></li>
+      <li><a href="../minutes/Meeting_Minutes_05.pdf" target="_blank" rel="noopener">Meeting 5 &mdash; 7 October 2026 (PDF)</a></li>
+      <li><a href="../minutes/Meeting_Minutes_06.pdf" target="_blank" rel="noopener">Meeting 6 &mdash; 14 October 2026 (PDF)</a></li>
+    </ul>
+  </section>
+
+  <section class="evidence">
+    <h2>Other evidence of groupwork</h2>
+    <p>Screenshots of our notes, drafts and group discussion. Click an image to open it full size.</p>
+    <div class="ev-grid">
+      <figure class="ev-card">
+        <a href="../evidence/01-presentation-script.png" target="_blank" rel="noopener"><img src="../evidence/01-presentation-script.png" alt="Andrey's Part 1 presentation script and topic criteria (focus, objective, direction, relevance, importance)." loading="lazy"></a>
+        <figcaption>Andrey's Part 1 presentation script and topic criteria (focus, objective, direction, relevance, importance).</figcaption>
+      </figure>
+      <figure class="ev-card">
+        <a href="../evidence/02-points-to-cover.png" target="_blank" rel="noopener"><img src="../evidence/02-points-to-cover.png" alt="Planning notes: points still to cover in the presentation, split between Taryn and Alan." loading="lazy"></a>
+        <figcaption>Planning notes: points still to cover in the presentation, split between Taryn and Alan.</figcaption>
+      </figure>
+      <figure class="ev-card">
+        <a href="../evidence/03-discord-risks-draft.png" target="_blank" rel="noopener"><img src="../evidence/03-discord-risks-draft.png" alt="Taryn's Risks draft and reference list, shared with the group in the #part-2 Discord channel." loading="lazy"></a>
+        <figcaption>Taryn's Risks draft and reference list, shared with the group in the #part-2 Discord channel.</figcaption>
+      </figure>
+      <figure class="ev-card">
+        <a href="../evidence/04-discord-choices-planning.png" target="_blank" rel="noopener"><img src="../evidence/04-discord-choices-planning.png" alt="Discord discussion: Andrey asks for evidence of groupwork and plans the Choices page with Alan." loading="lazy"></a>
+        <figcaption>Discord discussion: Andrey asks for evidence of groupwork and plans the Choices page with Alan.</figcaption>
+      </figure>
+      <figure class="ev-card">
+        <a href="../evidence/05-shared-research-doc.png" target="_blank" rel="noopener"><img src="../evidence/05-shared-research-doc.png" alt="The group's shared Word document, A2 research BCI, used to collect research and sources." loading="lazy"></a>
+        <figcaption>The group's shared Word document, A2 research BCI, used to collect research and sources.</figcaption>
+      </figure>
+      <figure class="ev-card">
+        <a href="../evidence/06-apa-citation-notes.png" target="_blank" rel="noopener"><img src="../evidence/06-apa-citation-notes.png" alt="Notes in the shared document on APA citation, followed by Alan's first Opportunities draft." loading="lazy"></a>
+        <figcaption>Notes in the shared document on APA citation, followed by Alan's first Opportunities draft.</figcaption>
+      </figure>
+      <figure class="ev-card">
+        <a href="../evidence/07-opportunities-conclusion-draft.png" target="_blank" rel="noopener"><img src="../evidence/07-opportunities-conclusion-draft.png" alt="Alan's Opportunities conclusion draft and reference list in the shared document." loading="lazy"></a>
+        <figcaption>Alan's Opportunities conclusion draft and reference list in the shared document.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>COMP501 Computing Technology in Society &mdash; Assignment 2, Semester 2, 2026.</p>
+</footer>
+
+</body>
+</html>
